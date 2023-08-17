@@ -15,9 +15,17 @@ class NewsSeed extends Seeder
     {
         News::create([
          "title" => "kanjudddddddbadg",
+         "category_id" => 1,
          "slug" => "kanjudddddddbadg",
          "excerpt" => "kanjudddddddbadgerfjnejvhujguhrfhgfuhguhrughurh",
          "body" => "kanjudddddddbadgerfjnejvhujguhrfjdddddddddddddddddddddddddddddddddddddddddddddddddddd"
-        ]);
+        ],
+        [
+            "title" => "kanjuddddddbhdhfbhdbfvfvffffffffffffffffdbadg",
+            "category_id" => 2,
+            "slug" => "kanjudddddddbadg",
+            "excerpt" => "kanjudddddddbadgerfjnejvhujguhrfhgfuhguhrughurh",
+            "body" => "kanjudddddddbadgerfjnejvhujguhrfjdddddddddddddddddddddddddddddddddddddddddddddddddddd"
+           ]);
     }
 }

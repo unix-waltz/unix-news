@@ -18,5 +18,7 @@ Route::get('/', function () {
     return view('index');
 });
 Route::get('/news',[NewsController::class,"News"]);
+Route::get('/Category/{category:category_slug}',[NewsController::class,"Category"]);
 Route::get('/news/{news:slug}',[NewsController::class,"DetailPost"]);
 
+Route::get('/Category',[NewsController::class,"Categories"]);

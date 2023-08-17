@@ -9,6 +9,7 @@
         <div class="col-md-12">
             <h1 class="mb-4">{{$news->title}}</h1>
             <p><strong>Author: John Doe</strong></p>
+           <a href="/Category/{{$news->category->category_slug}}">{{$news->category->category_name}}</a> 
             <img  src="../icon.png"alt="" class="img-fluid mb-4">
             {{$news->body}}
         </div>
