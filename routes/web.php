@@ -22,3 +22,5 @@ Route::get('/Category/{category:category_slug}',[NewsController::class,"Category
 Route::get('/news/{news:slug}',[NewsController::class,"DetailPost"]);
 
 Route::get('/Category',[NewsController::class,"Categories"]);
+Route::get('/Authors',[NewsController::class,"Authors"]);
+Route::get('/author/{author:name}',[NewsController::class,"Author"]);
