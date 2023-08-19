@@ -19,13 +19,6 @@ class NewsSeed extends Seeder
          "slug" => "kanjudddddddbadg",
          "excerpt" => "kanjudddddddbadgerfjnejvhujguhrfhgfuhguhrughurh",
          "body" => "kanjudddddddbadgerfjnejvhujguhrfjdddddddddddddddddddddddddddddddddddddddddddddddddddd"
-        ],
-        [
-            "title" => "kanjuddddddbhdhfbhdbfvfvffffffffffffffffdbadg",
-            "category_id" => 2,
-            "slug" => "kanjudddddddbadg",
-            "excerpt" => "kanjudddddddbadgerfjnejvhujguhrfhgfuhguhrughurh",
-            "body" => "kanjudddddddbadgerfjnejvhujguhrfjdddddddddddddddddddddddddddddddddddddddddddddddddddd"
-           ]);
+        ]);
     }
 }
