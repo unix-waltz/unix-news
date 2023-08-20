@@ -11,13 +11,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            <a class="nav-link {{$active == 'home' ? 'active' : ''}}"  href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/news">News</a>
+            <a class="nav-link {{$active == 'news' ? 'active' : ''}}"  href="/news">News</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle {{$active == 'category' ? 'active' : ''}}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Lihat
             </a>
             <ul class="dropdown-menu">
@@ -27,7 +27,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/Category" aria-disabled="true">Category</a>
+            <a class="nav-link {{$active == 'about' ? 'active' : ''}}" href="/about" aria-disabled="true">About Us</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
