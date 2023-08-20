@@ -123,12 +123,29 @@ a{
             .video-card {
                 margin-bottom: 1rem;
             }
-   
+            @media (max-width: 576px) {
+      footer .content .link-boxes {
+        flex-direction: column;
+      }
+    }
+
+    /* Media query untuk layar tablet */
+    @media (min-width: 577px) and (max-width: 991px) {
+      footer .content .link-boxes {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      footer .content .link-boxes .box {
+        width: calc(50% - 20px);
+        margin: 10px;
+      }
+    }
 </style>
   </head>
   <body>
 @include("components.nav")
 @yield('content')
+<section class="container mt-4">
    <br> <hr align="center">
 
     <br>    <footer>
@@ -178,9 +195,8 @@ a{
           </div>
         </footer>
         <hr align="center">
-
+</section>
         <br>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     
   </body>
-</html>

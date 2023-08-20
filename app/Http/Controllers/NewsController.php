@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class NewsController extends Controller
 {
     public function News(){
-    $news = News::all();
+    $news = News::with('category','user')->latest()->get();
     return view("news",["news" => $news,
     "active" => "news"
 ]);

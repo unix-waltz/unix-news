@@ -11,9 +11,9 @@
                 <div class="category-box">
                     <h3>{{$d->name}}</h3>
                 </a>
-                    <p>
+                    <p> &nbsp;
                         @foreach ($d->news as $news) 
-                           <a href="/Category/{{$news->category->category_slug}}"> {{ $news->category->category_name}},</a>
+                           <a href="/Category/{{$news->category->category_slug}}">{{ $news->category->category_name}},</a>
                         @endforeach
                     </p>
                     <a href="/author/{{$d->username}}" class="category-link"> 
