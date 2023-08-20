@@ -1,6 +1,9 @@
 
 @extends("layouts.template")
 @section("content")
+<br>
+<div class="container">
+<h1>All Post's</h1></div><br>
 <div class="container mt-4">
     @foreach ($news as $n )
     <div class="row">

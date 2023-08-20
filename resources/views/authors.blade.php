@@ -10,7 +10,13 @@
             <a href="/author/{{$d->username}}" class="category-link"> 
                 <div class="category-box">
                     <h3>{{$d->name}}</h3>
-                    <p>Deskripsi kategori 1.</p>
+                </a>
+                    <p>
+                        @foreach ($d->news as $news) 
+                           <a href="/Category/{{$news->category->category_slug}}"> {{ $news->category->category_name}},</a>
+                        @endforeach
+                    </p>
+                    <a href="/author/{{$d->username}}" class="category-link"> 
                 </div>
             </a>
         </div>
