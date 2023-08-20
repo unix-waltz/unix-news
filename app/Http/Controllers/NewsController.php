@@ -22,14 +22,14 @@ public function Category(Category $category){
 return view("category",["category" => $category,"active" => "category"]);
 }
 public function Categories(){
-    $category = Category::all();
+    $category = Category::with('news','user')->get();
     return view("categories",["data" => $category,
     "active" => "category"
 ]);
 }
 public function Authors(){
-    $data = User::all();
-    return view("authors",["data" => $data,
+    $data = User::with('news')->get();
+    return view("authors",["data" => $data->load('category'),
     "active" => "category"
 ]);
 }
