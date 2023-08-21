@@ -544,11 +544,9 @@ hr{
         <img src="{{asset('logo.png')}}" alt="" class="logo"/>
       </div>
       <div class="company-info">
-        <span>PHOTOS <span class="our">FOR EVERYONE</span></span>
+        <span>NEWS <span class="our">FOR EVERYONE</span></span>
         <p>
-          <b>Pico</b> is a India-based website dedicated for sharing stock photography under the Pico license. Pico allows
-          photographers to upload photos to its website, which are then curated by a team of photo editors. In Pico we are
-          aspiring to be one of the largest photography suppliers on the internet.
+          <b>UNIXNEWS</b> The Indonesia-based website is devoted to providing the latest news under a comprehensive coverage. Our platform enables journalists to publish news articles, which are subsequently reviewed by a team of experienced editors. At our core, we strive to become one of the prominent sources of news content on the internet.
         </p>
       </div>
     </div>

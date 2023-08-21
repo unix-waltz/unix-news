@@ -140,6 +140,7 @@ a{
         margin: 10px;
       }
     }
+   
 </style>
   </head>
   <body>
@@ -185,7 +186,7 @@ a{
               <ul class="box">
                 <li class="link_name">Contact</li>
                 <li><a target="on_blank" href="tel:+919079680135">+91 9079680135</a></li>
-                <li><a target="on_blank" href="mailto:'connectpicoindia@gmail.com'">contactpicoindia@gmail.com</a></li>
+                <li><a target="on_blank" href="mailto:connectpicoindia@gmail.com">contactpicoindia@gmail.com</a></li>
               </ul>
             </div>
           </div>

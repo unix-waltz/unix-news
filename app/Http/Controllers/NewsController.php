@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 class NewsController extends Controller
 {
     public function News(){
+        // @dd(request("q"));
     $news = News::with('category','user')->latest()->get();
     return view("news",["news" => $news,
     "active" => "news"
@@ -22,14 +23,14 @@ public function Category(Category $category){
 return view("category",["category" => $category,"active" => "category"]);
 }
 public function Categories(){
-    $category = Category::with('news','user')->get();
+    $category = Category::with('news','news.user')->get();
     return view("categories",["data" => $category,
     "active" => "category"
 ]);
 }
 public function Authors(){
     $data = User::with('news')->get();
-    return view("authors",["data" => $data->load('category'),
+    return view("authors",["data" => $data->load('news.category'),
     "active" => "category"
 ]);
 }

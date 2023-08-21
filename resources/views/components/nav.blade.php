@@ -30,8 +30,8 @@
             <a class="nav-link {{$active == 'about' ? 'active' : ''}}" href="/about" aria-disabled="true">About Us</a>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <form class="d-flex" role="search" method="get" action="/news">
+          <input name="q" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-text-success" type="submit">
               <i class="fas fa-search"></i> 
           </button>
