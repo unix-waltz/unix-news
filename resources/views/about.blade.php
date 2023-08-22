@@ -557,12 +557,12 @@ hr{
       <div class="card">
         <div class="card-image loading"><img src="{{asset('logo-open-ai.png')}}" alt="" /></div>
         <div class="card-info">
-          <h3 class="card-title loading"><span>Yash <span class="yellow-surname">Falke</span></span></h3>
+          <h3 class="card-title loading"><span>CHAT<span class="yellow-surname">GPT</span></span></h3>
           <p class="card-description loading">
             <span class="personal-info">
               <span class="info">Graphic Designing Head</span> <br>
-              Pursuing IT Engineering (VIT Mumbai) <br>
-              Email: <a href="mailto:'yashfalke77@gmail.com'">yashfalke77@gmail.com</a>
+              Pursuing IT Engineering (VIT Jakarta) <br>
+              Email: <a href="mailto:''">example@gmail.com</a>
             </span>
           </p>
           
@@ -571,12 +571,12 @@ hr{
       <div class="card">
         <div class="card-image loading"><img src="{{asset('logo-open-ai.png')}}" alt="" /></div>
         <div class="card-info">
-          <h3 class="card-title loading"><span>Yash <span class="yellow-surname">Falke</span></span></h3>
+          <h3 class="card-title loading"><span>RIO<span class="yellow-surname">PUTRA</span></span></h3>
           <p class="card-description loading">
             <span class="personal-info">
-              <span class="info">Graphic Designing Head</span> <br>
-              Pursuing IT Engineering (VIT Mumbai) <br>
-              Email: <a href="mailto:'yashfalke77@gmail.com'">yashfalke77@gmail.com</a>
+              <span class="info">Design Pattern</span> <br>
+               IT Developer <br>
+              Email: <a href="mailto:''">example@gmail.com</a>
             </span>
           </p>
           
@@ -585,12 +585,12 @@ hr{
       <div class="card">
         <div class="card-image loading"><img src="{{asset('logo-open-ai.png')}}" alt="" /></div>
         <div class="card-info">
-          <h3 class="card-title loading"><span>Yash <span class="yellow-surname">Falke</span></span></h3>
+          <h3 class="card-title loading"><span>CHAT<span class="yellow-surname">GPT</span></span></h3>
           <p class="card-description loading">
             <span class="personal-info">
-              <span class="info">Graphic Designing Head</span> <br>
-              Pursuing IT Engineering (VIT Mumbai) <br>
-              Email: <a href="mailto:'yashfalke77@gmail.com'">yashfalke77@gmail.com</a>
+              <span class="info">CTO Head</span> <br>
+              Pursuing IT Engineering <br>
+              Email: <a href="mailto:''">example@gmail.com</a>
             </span>
           </p>
           
@@ -619,7 +619,7 @@ hr{
           </ul>
           <ul class="box">
             <li class="link_name">Recommended</li>
-            <li><a href=""">India</a></li>
+            <li><a href=""">Indonesia</a></li>
             <li><a href=""">Art and Culture</a></li>
             <li><a href="">People</a></li>
             <li><a href=""">Travel</a></li>
@@ -634,8 +634,8 @@ hr{
           </ul>
           <ul class="box">
             <li class="link_name">Contact</li>
-            <li><a target="on_blank" href="tel:+919079680135">+91 9079680135</a></li>
-            <li><a target="on_blank" href="mailto:'connectpicoindia@gmail.com'">contactpicoindia@gmail.com</a></li>
+            <li><a target="on_blank" href="tel:+919079680135">+62-example</a></li>
+            <li><a target="on_blank" href="mailto:'@gmail.com'">example@gmail.com</a></li>
           </ul>
         </div>
       </div>
