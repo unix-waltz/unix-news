@@ -7,6 +7,43 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <style>
+#section-detail{
+  width: 50% !important;
+}
+.box-hero img {
+	width: 100%;
+	height: auto;
+}
+.box-hero {
+	display: flex;
+	position: relative;
+	border-radius: 1em;
+	width: 90%;
+	height: 30em;
+	overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+}
+.box-hero img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	object-fit: cover;
+	object-position: center;
+	height: 100%;
+	
+}
+.box-hero p {
+	position: relative;
+	margin: auto;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 2em;
+	color: #263238;
+}
+
 footer {
   background: white;
   width: 100%;
@@ -140,7 +177,97 @@ a{
         margin: 10px;
       }
     }
-   
+    .header {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  margin-bottom: -60px;
+}
+.title {
+  width: max-content;
+  height: 20px;
+}
+
+.title__name {
+  font-weight: 600;
+  font-size: 50px;
+  font-family: Frank Ruhl Libre;
+}
+
+.title__categories {
+  margin-top: -25px;
+  text-align:center;
+  color: #aaa;
+  font-weight: 400;
+  font-size: 17.5px;
+  display: flex;
+  align-items: center;
+  gap: 7.5px;
+  font-family: Inter;
+}
+
+.categories__icon {
+  font-size: 20;
+  cursor: pointer;
+}
+
+.categories__item {
+  cursor: pointer;
+}
+
+.categories__item:not(:last-child)::after {
+  content: ",";
+  pointer-events: none;
+}
+.categories__item{
+  color: gray !important;
+}
+#body-x{
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.stats {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  height: 20px;
+  position: relative;
+  text-align: left;
+}
+
+.stat__name {
+  display: block;
+  text-transform: uppercase;
+  color: #aaa;
+  font-weight: 400;
+  font-family: Inter;
+}
+
+.stat__value {
+  display: block;
+  margin-top: -15px;
+  font-size: 35px;
+}
+
+.stats__divider {
+  position: relative;
+  display: inline-block;
+  top: -10px;
+  width: 2px;
+  height: 35px;
+  background-color: rgba(0, 0, 0, 0.075);
+  border-radius: 5px;
+}
+
 </style>
   </head>
   <body>

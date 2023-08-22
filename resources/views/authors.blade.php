@@ -11,8 +11,9 @@
                 <div class="category-box">
                     <h3>{{$d->name}}</h3>
                 </a>
-                    <p> &nbsp;
-                        @foreach ($d->news as $news) 
+                    <p> &nbsp;<i class="fas fa-folder"></i> 
+                        @foreach ($d->news as $news)
+
                            <a href="/Category/{{$news->category->category_slug}}">{{ $news->category->category_name}},</a>
                         @endforeach
                     </p>
