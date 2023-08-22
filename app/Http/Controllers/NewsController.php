@@ -9,6 +9,14 @@ use Illuminate\Http\Request;
 
 class NewsController extends Controller
 {
+    public function index(){
+        $data = News::with('category','user')->latest()->get();
+        return view('index',[
+            "active" => "home",
+            "data" => $data
+    
+        ]);
+    }
     public function News(){
         // @dd(request("q"));
     $news = News::with('category','user')->latest()->get();
