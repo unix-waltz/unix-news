@@ -19,25 +19,25 @@ class DatabaseSeeder extends Seeder
 
         Category::create(
             [
-              "category_name" => "category2",
-              "category_slug" => "category2"
+              "category_name" => "Programing",
+              "category_slug" => "Programing"
             ]);
             Category::create(
                 [
-                  "category_name" => "category1",
-                  "category_slug" => "category1"
+                  "category_name" => "financial",
+                  "category_slug" => "financial"
                 ]);
                 Category::create(
                     [
-                      "category_name" => "category3",
-                      "category_slug" => "category3"
+                      "category_name" => "filsafat",
+                      "category_slug" => "filsafat"
                     ]);
                     Category::create(
                         [
-                          "category_name" => "category4",
-                          "category_slug" => "category4"
+                          "category_name" => "manga",
+                          "category_slug" => "manga"
                         ]);
-                        News::factory(10)->create();
+                        News::factory(50)->create();
             // News::create([
             //     "title" => "kanjudddddddbadg1",
             //     "category_id" => 1,

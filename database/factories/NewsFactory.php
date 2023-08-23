@@ -20,7 +20,7 @@ class NewsFactory extends Factory
             "title" => $this->faker->sentence(),
             "slug" => $this->faker->slug(),
             "excerpt" => $this->faker->paragraph(),
-            "body" => $this->faker->paragraph(mt_rand(10,10)),
+            "body" => $this->faker->paragraph(mt_rand(10,100)),
             "user_id" => mt_rand(1,10),
             "category_id" => mt_rand(1,4)
         ];

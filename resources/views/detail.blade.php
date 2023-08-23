@@ -11,7 +11,7 @@
     </div>
     <div class="container m-4">
         <div class="container" id="body-x">
-            <p><strong>- <a href="/author/{{$news->user->name}}">{{$news->user->name}}</a></strong>&nbsp;</p><small class="text-body-secondary">{{$news->created_at->diffForHumans()}}</small>
+            <p><strong>- <a href="/author/{{$news->user->username}}">{{$news->user->name}}</a></strong>&nbsp;</p><small class="text-body-secondary">{{$news->created_at->diffForHumans()}}</small>
  <p class="fs-4">   {{$news->body}}</p><a href="/news">Kembali</a>
 </div>
     </div>
