@@ -18,7 +18,7 @@ class NewsController extends Controller
         ]);
     }
     public function News(){
-        // @dd(request("q"));
+          
     $news = News::with('category','user')->latest()->get();
     return view("news",["news" => $news,
     "active" => "news"
