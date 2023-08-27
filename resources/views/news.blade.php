@@ -19,7 +19,10 @@
             <p><strong>Author: <a href="/author/{{$n->user->username}}" class=""> {{$n->user->name}} </a></strong></p>
            <small class="text-body-secondary">{{$n->created_at->diffForHumans()}}</small> <p>
                 {{$n->excerpt}}
-                <a href="/news/{{$n->slug}}">Lihat Selengkapnya</a>
+                <a href="/news/{{$n->slug}}" class="custom-link">
+                    <i class="custom-icon fas fa-arrow-right"></i>Lihat Selengkapnya
+                </a>
+
             </p>
            
         </div>

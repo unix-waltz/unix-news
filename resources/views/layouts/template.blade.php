@@ -74,6 +74,15 @@ footer .content .top {
   color: #00ADB5;
   font-size: 30px;
 }
+.custom-link {
+            color: #00ADB5;
+            text-decoration: none;
+        }
+
+        /* Ganti warna ikon sesuai dengan warna yang diinginkan (#00ADB5) */
+        .custom-icon {
+            color: #00ADB5;
+        }
 
 /* ... */
 hr{
