@@ -6,7 +6,10 @@
         <img src="{{ asset("icon.png") }}" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title" align="center">{{ $data[0]->title }}</h5>
-            <p class="card-text" align="center">{{ $data[0]->excerpt }} <a href="/news/{{ $data[0]->slug }}">Read more</a></p>
+            <p class="card-text" align="center">{{ $data[0]->excerpt }} 
+                <a href="/news/{{ $data[0]->slug }}" class="custom-link">
+                    <i class="custom-icon fas fa-arrow-right"></i>Lihat Selengkapnya
+                </a>    </p>
             <small class="text-body-secondary">{{ $data[0]->created_at->diffForHumans() }}</small>
             <p class="card-text"></p>
         </div>
@@ -21,7 +24,7 @@
         <div class="col-md-4">
             <div class="video-card">
                 <a href="/news/{{$d->slug}}">
-                    <img src="https://via.placeholder.com/300x200" alt="Video Thumbnail" class="video-thumbnail">
+                    <img src="{{asset('logo-open-ai.png')}}" alt="Video Thumbnail" class="video-thumbnail">
                     <h2 class="video-title">{{$d->title}}</h2>
                     <p class="video-description">{{$d->excerpt}}</p>
                     <small class="text-body-secondary">{{$d->created_at->diffForHumans()}}</small>

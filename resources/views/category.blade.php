@@ -9,10 +9,14 @@
                 <div class="col-md-4">
                     <div class="video-card">
                         <a href="/news/{{$c->slug}}">
-                            <img src="https://via.placeholder.com/300x200" alt="Video Thumbnail" class="video-thumbnail">
-                            <h2 class="video-title">{{$c->title}}</h2>
-                            <p class="video-description">{{$c->excerpt}}.</p>
-                        </a>
+                            <img src="{{asset('logo-open-ai.png')}}" alt="Video Thumbnail" class="video-thumbnail">
+                           </a>  <h2 class="video-title">{{$c->title}}</h2>
+                            <p class="video-description">{{$c->excerpt}}.
+                                <a href="/news/{{ $c->slug }}" class="custom-link">
+                                    <i class="custom-icon fas fa-arrow-right"></i>Lihat Selengkapnya
+                                </a>  
+                            </p>
+                       
                     </div>
                 </div>
                 @endforeach
