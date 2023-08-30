@@ -31,7 +31,7 @@
           </li>
         </ul>
         <form class="d-flex" role="search" method="get" action="/news">
-          <input name="q" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <input name="q" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" value="{{request('q')}}">
           <button class="btn btn-outline-text-success" type="submit">
               <i class="fas fa-search"></i> 
           </button>

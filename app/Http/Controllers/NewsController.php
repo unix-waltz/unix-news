@@ -17,10 +17,14 @@ class NewsController extends Controller
     
         ]);
     }
-    public function News(){
-          
-    $news = News::with('category','user')->latest()->get();
-    return view("news",["news" => $news,
+    public function News(Request $request){
+    $news = News::with('category','user')->latest();
+    if($request){
+       $request= $request->input('q');
+        $news->where('title','like','%'. $request . '%')
+        ->orWhere('body','like','%'. $request . '%');
+    }
+    return view("news",["news" => $news->get(),
     "active" => "news"
 ]);
 }
