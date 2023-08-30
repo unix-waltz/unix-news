@@ -3,7 +3,7 @@
 @section("content")
 <div class="container"><br><br>
     <div class="card border-0" id="shsh">
-        <img src="{{ asset("icon.png") }}" class="card-img-top" alt="...">
+        <img src="{{ asset("logo-open-ai.png") }}" class="card-img-top" alt="..." style="width : 100%">
         <div class="card-body">
             <h5 class="card-title" align="center">{{ $data[0]->title }}</h5>
             <p class="card-text" align="center">{{ $data[0]->excerpt }} 
