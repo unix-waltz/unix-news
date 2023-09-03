@@ -3,17 +3,19 @@
 @section("content")
 <div class="container"><br><br>
     <div class="card border-0" id="shsh">
-        <img src="{{ asset("logo-open-ai.png") }}" class="card-img-top" alt="..." style="width : 100%">
+        <img src="{{ asset("logo-open-ai.png") }}" class="card-img-top" alt="..." style="width : 100%; height: 700px; object-fit: cover;">
         <div class="card-body">
             <h5 class="card-title" align="center">{{ $data[0]->title }}</h5>
             <p class="card-text" align="center">{{ $data[0]->excerpt }} 
                 <a href="/news/{{ $data[0]->slug }}" class="custom-link">
                     <i class="custom-icon fas fa-arrow-right"></i>Lihat Selengkapnya
-                </a>    </p>
+                </a>
+            </p>
             <small class="text-body-secondary">{{ $data[0]->created_at->diffForHumans() }}</small>
             <p class="card-text"></p>
         </div>
     </div>
+    
     
 <div class="container mt-5" id="section-detail">
     <h1 class="mb-4" align="center"></h1><br>
