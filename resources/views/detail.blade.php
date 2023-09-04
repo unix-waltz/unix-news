@@ -11,8 +11,10 @@
         <h1>{{$news->title}}</h1>
         <div class="col-sm text-secondary">
 <p>
-<i class="bi bi-tag text-secondary h5"></i>
-{{$news->category->category_name}}
+<i class="bi bi-tag text-secondary h5 "></i>
+<a href="/Category/{{$news->category->category_slug}}" class="text-secondary">
+    {{$news->category->category_name}}
+</a>
 </p>
         </div>
        

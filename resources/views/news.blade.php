@@ -6,13 +6,15 @@
 <h1>All Post's</h1></div><br>
 @if ($news->count() > 0)
   
-<div class="container mt-4">
+<div class="container">
+    
     @foreach ($news as $n )
-    <div class="row">
+    <div class="row" style="width: 100%; height: 60%;">
 
-        <div class="col-md-4">
-            <img src="icon.png" alt="Thumbnail" class="img-fluid">
-        </div>
+       <div class="col" ">
+    <img src="{{ asset('logo-open-ai.png') }}" alt="Thumbnail" class="img-fluid rounded" style="width: 100%; height: 60%;">
+</div>
+
         <div class="col-md-8">
             
            <h2>{{$n->title}}</h2>
@@ -22,7 +24,6 @@
                 <a href="/news/{{$n->slug}}" class="custom-link">
                     <i class="custom-icon fas fa-arrow-right"></i>Lihat Selengkapnya
                 </a>
-
             </p>
            
         </div>
