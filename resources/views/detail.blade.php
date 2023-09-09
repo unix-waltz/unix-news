@@ -11,6 +11,7 @@
         <h1>{{$news->title}}</h1>
         <div class="col-sm text-secondary">
 <p>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <i class="bi bi-tag text-secondary h5 "></i>
 <a href="/Category/{{$news->category->category_slug}}" class="text-secondary">
     {{$news->category->category_name}}
