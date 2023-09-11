@@ -79,17 +79,17 @@ button {
                 @csrf
                 @method('post')
                 <label for="fullname">Name</label>
-                <input type="text" name="name" id="fullname" placeholder="Ex: Maman Bihun" required>
+                <input type="text" name="name" id="fullname" placeholder="Ex: Maman Bihun" value="{{old('name')}}" required>
                 @error('name')
                 <small style="color: red;"><i>{{$message}}</i></small>
                 @enderror 
                  <label for="fullname">username</label>
-                <input type="text" name="username" id="fullname" placeholder="Ex: dadangsebit" required>
+                <input type="text" name="username" id="fullname" placeholder="Ex: dadangsebit" value="{{old('username')}}" required>
                 @error('username')
                 <small style="color: red;"><i>{{$message}}</i></small>
                 @enderror
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+              <input type="email" id="email" name="email" placeholder="Enter your email" value="{{old('email')}}" required>
               @error('email')
               <small style="color: red;"><i>{{$message}}</i></small>
               @enderror

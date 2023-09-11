@@ -72,8 +72,14 @@ button {
     </style>
 </head>
 <body>
+  
     <div class="container">
+    
         <div class="card">
+
+          @if (session()->has('success'))
+     <p align="center">{{session('success')}}</p> 
+     @endif
           <h2>Login Form</h2>
           <form action="{{route('login')}}" method="post">
             @csrf
