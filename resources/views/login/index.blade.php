@@ -76,20 +76,26 @@ button {
     <div class="container">
     
         <div class="card">
-
+@if (session()->has('error'))
+<p align="center">{{session('error')}}</p> 
+@endif
           @if (session()->has('success'))
      <p align="center">{{session('success')}}</p> 
      @endif
           <h2>Login Form</h2>
-          <form action="{{route('login')}}" method="post">
+          <form action="/login" method="post">
             @csrf
             @method('post')
-            <label for="username">Username</label>
-            <input type="text" id="username" placeholder="Enter your username">
-      
+            <label for="username">Email </label>
+            <input type="text" name="email" id="username" placeholder="Enter your Email" value="{{old('email')}}" required>
+            @error('email')
+            <small style="color: red;"><i>{{$message}}</i></small>
+            @enderror
             <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Enter your password">
-      
+            <input type="password" name="password" id="password" placeholder="Enter your password" required>
+            @error('password')
+            <small style="color: red;"><i>{{$message}}</i></small>
+            @enderror
             <button type="submit">Login</button>
           </form>
           <div class="switch">Don't have an account? <a href="/register">Register here</a></div>
