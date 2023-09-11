@@ -29,7 +29,7 @@
 }
 
 h2 {
-  color: #007BFF;
+  color: #00ADB5;
   margin-bottom: 20px;
 }
 
@@ -52,7 +52,7 @@ input {
 
 button {
   padding: 10px;
-  background-color: #007BFF;
+  background-color: #00ADB5;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -65,7 +65,7 @@ button {
 }
 
 .switch a {
-  color: #007BFF;
+  color: #00ADB5;
   text-decoration: none;
 }
 
@@ -75,16 +75,29 @@ button {
     <div class="container">
         <div class="card">
             <h2>Register Form</h2>
-            <form>
-              <label for="fullname">Full Name</label>
-              <input type="text" id="fullname" placeholder="Enter your full name">
-        
+            <form action="{{route('register')}}" method="post">
+                @csrf
+                @method('post')
+                <label for="fullname">Name</label>
+                <input type="text" name="name" id="fullname" placeholder="Ex: Maman Bihun" required>
+                @error('name')
+                <small style="color: red;"><i>{{$message}}</i></small>
+                @enderror 
+                 <label for="fullname">username</label>
+                <input type="text" name="username" id="fullname" placeholder="Ex: dadangsebit" required>
+                @error('username')
+                <small style="color: red;"><i>{{$message}}</i></small>
+                @enderror
               <label for="email">Email</label>
-              <input type="email" id="email" placeholder="Enter your email">
-        
+              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+              @error('email')
+              <small style="color: red;"><i>{{$message}}</i></small>
+              @enderror
               <label for="new-password">New Password</label>
-              <input type="password" id="new-password" placeholder="Enter your new password">
-        
+              <input type="password" id="new-password" name="password" placeholder="Enter your  password" required>
+              @error('password')
+              <small style="color: red;"><i>{{$message}}</i></small>
+              @enderror
               <button type="submit">Register</button>
             </form>
             <div class="switch">Already have an account? <a href="/login" >Login here</a></div>

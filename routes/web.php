@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+Route::post('/register',[RegisterController::class,'register'])->name('register');
+Route::post('/login',[LoginController::class,'login'])->name('login');
 Route::get('/register',[RegisterController::class,'index']);
 Route::get('/login',[LoginController::class,'index']);
 Route::get('/',[NewsController::class, 'index']);

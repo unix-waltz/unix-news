@@ -29,7 +29,7 @@
 }
 
 h2 {
-  color: #007BFF;
+  color: #00ADB5;
   margin-bottom: 20px;
 }
 
@@ -52,7 +52,7 @@ input {
 
 button {
   padding: 10px;
-  background-color: #007BFF;
+  background-color: #00ADB5;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -65,7 +65,7 @@ button {
 }
 
 .switch a {
-  color: #007BFF;
+  color: #00ADB5;
   text-decoration: none;
 }
 
@@ -75,7 +75,9 @@ button {
     <div class="container">
         <div class="card">
           <h2>Login Form</h2>
-          <form>
+          <form action="{{route('login')}}" method="post">
+            @csrf
+            @method('post')
             <label for="username">Username</label>
             <input type="text" id="username" placeholder="Enter your username">
       
@@ -86,8 +88,6 @@ button {
           </form>
           <div class="switch">Don't have an account? <a href="/register">Register here</a></div>
         </div>
-      
-        
       </div>
 </body>
 </html>
