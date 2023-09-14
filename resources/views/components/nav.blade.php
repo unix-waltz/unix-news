@@ -26,9 +26,15 @@
       
             </ul>
           </li>
-          <li class="nav-item">
+         @auth
+         <li class="nav-item">
+          <a class="nav-link {{$active == 'about' ? 'active' : ''}}" href="/home" aria-disabled="true">Dashboard</a>
+        </li>
+           @else
+           <li class="nav-item">
             <a class="nav-link {{$active == 'about' ? 'active' : ''}}" href="/about" aria-disabled="true">About Us</a>
           </li>
+         @endauth
           <li class="nav-item"> 
           </li>
         </ul>
@@ -45,7 +51,7 @@
       <ul class="list-unstyled navbar-nav mr-5 mb-2 mb-lg-0">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        &nbsp;Logout
+        &nbsp;{{auth()->user()->name}}
           </a>
           <ul class="dropdown-menu">
             <li><button type="submit" class="dropdown-item" >Logout</button></li>
