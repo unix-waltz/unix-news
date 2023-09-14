@@ -7,6 +7,11 @@ use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 
+Route::get('/dashboard/post/preview/{slug:slug}',[DashboardController::class,'index'])->middleware('auth');
+Route::put('/dashboard/post/edit/{slug:slug}',[DashboardController::class,'edit'])->middleware('auth');
+Route::post('/dashboard/post/delete/{slug:slug}',[DashboardController::class,'delete'])->middleware('auth');
+
+
 Route::get('/home',[DashboardController::class,'index'])->middleware('auth');
 Route::post('/logout',[LogoutController::class,'index'])->middleware('auth');
 Route::post('/register',[RegisterController::class,'register'])->name('register');
