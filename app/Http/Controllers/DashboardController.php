@@ -44,4 +44,8 @@ class DashboardController extends Controller
     public function edit(News $slug){
 @dd($slug);
     }
+
+    public function createPost(Request $request){
+        @dd($request->excerpt);
+    }
 }
