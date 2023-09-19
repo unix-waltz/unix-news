@@ -30,7 +30,7 @@
         <div class="container" id="body-x">
             
             <p><strong><a href="/author/{{$news->user->username}}" class="blockquote-footer">{{$news->user->name}}</a></strong>&nbsp;</p><small class="text-body-secondary">{{$news->created_at->diffForHumans()}}</small>
- <p class="fs-4">   {{$news->body}}</p> <a href="/news" class="custom-link">
+ <p class="fs-4">   <?= $news->body ?></p> <a href="/news" class="custom-link">
     <i class="custom-icon fas fa-arrow-left"></i> Kembali
 </a>
 </div>

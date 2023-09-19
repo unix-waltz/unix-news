@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\News;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
@@ -38,7 +39,7 @@ class DashboardController extends Controller
             'page' => $page,
             "mypost_datapost" => $post_datapost,
             'post' => $slug,
-
+             "category" => Category::all(),
         ]);
     }
     public function edit(News $slug){
@@ -46,6 +47,19 @@ class DashboardController extends Controller
     }
 
     public function createPost(Request $request){
-        @dd($request->excerpt);
+        $slug =  strtolower($request->title);
+         $slug = \Illuminate\Support\Str::slug($slug, '-')."_".mt_rand(1,100)."_".mt_rand(1,1000)."-".mt_rand(1,1000000)."-t_".time();
+        //   dd((int)$request->category_id);
+       $result = $request->validate([
+        'title' => 'required|min:12|max:1000',
+        "category_id" => 'required',
+        "excerpt" => 'required|min:10|max:400',
+        "body" => "required",
+       ]);
+       $result['user_id'] = auth()->user()->id;
+       $result['category_id'] = (int)$request->category_id;
+       $result['slug'] = $slug;
+       News::create($result);
+       return "ok";
     }
 }

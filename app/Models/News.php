@@ -12,7 +12,7 @@ class News extends Model
 {
     use HasFactory;
     protected $table = 'news';
-    protected $fillable=["title","exceprt","body"];
+    protected $guarded=['id'];
 
     public function category(){
         return $this->belongsTo(Category::class);
