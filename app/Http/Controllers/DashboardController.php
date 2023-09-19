@@ -42,24 +42,55 @@ class DashboardController extends Controller
              "category" => Category::all(),
         ]);
     }
-    public function edit(News $slug){
-@dd($slug);
-    }
+    public function editLogic(Request $request){
 
+        $id = (int)$request->id;
+        $result = $request->validate([
+            "title" => "min:1|required",
+            "excerpt" => "min:1|required",
+            "category_id" => "required",
+            "thumb" => "image",
+            "body" => "required",
+        ]);
+ if( $request->thumb == null){
+$result['thumb'] = $request->old_thumb;
+ }else{
+    $result['thumb'] = "Thumb_".time()."U_"."_".mt_rand(1,100);
+    $request->file('thumb')->storeAs('ThumbPost',$result['thumb']);
+ }
+
+ $model = News::find($id);
+ $model->update($result);
+ return redirect('/home?page=mypost')
+ ->with('success',"Successfully Edit Post");
+    }
+public function delete($id){
+
+    $del = News::find($id);
+    if($del) $del->delete();
+    return redirect('/home?page=mypost')
+    ->with('success',"Successfully deleted");
+    
+}
     public function createPost(Request $request){
+        $thumbName = "Thumb_".time()."U_"."_".mt_rand(1,100);
         $slug =  strtolower($request->title);
          $slug = \Illuminate\Support\Str::slug($slug, '-')."_".mt_rand(1,100)."_".mt_rand(1,1000)."-".mt_rand(1,1000000)."-t_".time();
-        //   dd((int)$request->category_id);
        $result = $request->validate([
+        "thumb" => "image|nullable",
         'title' => 'required|min:12|max:1000',
         "category_id" => 'required',
         "excerpt" => 'required|min:10|max:400',
         "body" => "required",
        ]);
+       $result['thumb'] = $thumbName;
        $result['user_id'] = auth()->user()->id;
        $result['category_id'] = (int)$request->category_id;
        $result['slug'] = $slug;
        News::create($result);
-       return "ok";
+       $request->file('thumb')->storeAs('ThumbPost',$thumbName);
+       return redirect('/home?page=mypost')
+       ->with('success',"Successfully create Post");
     }
+   
 }

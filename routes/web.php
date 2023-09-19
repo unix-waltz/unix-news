@@ -12,9 +12,8 @@ use App\Http\Controllers\DashboardController;
 Route::post('/dashboard/post/create',[DashboardController::class,'createPost'])->middleware('auth')->name('createPost');
 
 Route::get('/dashboard/post/preview/{slug:slug}',[DashboardController::class,'index'])->middleware('auth');
-Route::put('/dashboard/post/edit/{slug:slug}',[DashboardController::class,'edit'])->middleware('auth');
-Route::post('/dashboard/post/delete/{slug:slug}',[DashboardController::class,'delete'])->middleware('auth');
-
+Route::put('/dashboard/post/editPost/',[DashboardController::class,'editLogic'])->middleware('auth')->name('editM');
+Route::get('/dashboard/post/hapus/{id}',[DashboardController::class,'delete'])->middleware('auth');
 
 Route::get('/home',[DashboardController::class,'index'])->middleware('auth');
 Route::post('/logout',[LogoutController::class,'index'])->middleware('auth');

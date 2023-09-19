@@ -16,7 +16,7 @@
     
     <div class="box-hero">
         
-        <img src="{{asset('logo-open-ai.png')}}" alt="Image de naruto usada de fondo">
+        <img src="{{asset('/storage/ThumbPost/'.$post->thumb)}}" alt="Image de naruto usada de fondo">
         <p></p>
     </div>
     <div class="container m-4">

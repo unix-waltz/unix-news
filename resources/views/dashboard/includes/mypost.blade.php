@@ -1,4 +1,13 @@
 <br>
+@if (session()->has('success'))
+<div class="container">
+
+  <div class="alert alert-info" role="alert">
+  {{session('success')}}
+  </div>
+</div>
+<br>
+@endif
 <table class="table table-bordered">
     <thead>
       <tr>
@@ -18,9 +27,9 @@
             {{-- preview --}}
             <a href="/dashboard/post/preview/{{$p->slug}}?page=detailPost" class="btn"><i class="bi bi-easel"></i>&nbsp;Detail</a>
             {{-- edit --}}
-            <a href="/dashboard/post/preview/{{$p->slug}}?page=editPost" class="btn"><i class="bi bi-pen"></i>&nbsp;Edit</a>
+            <a href="/home?page=editPost&id={{$p->id}}" class="btn"><i class="bi bi-pen"></i>&nbsp;Edit</a>
             {{-- hapus --}}
-            <a href="/dashboard/post/hapus/{{$p->slug}}" class="btn"><i class="bi bi-trash2"></i>&nbsp;Delete</a>
+            <a href="/dashboard/post/hapus/{{$p->id}}" onclick="return confirm('Yakin Bos?')" class="btn"><i class="bi bi-trash2"></i>&nbsp;Delete</a>
         </td>
       </tr>
       @endforeach
